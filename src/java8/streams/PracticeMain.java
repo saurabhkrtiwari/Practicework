@@ -1,6 +1,7 @@
 package java8.streams;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -11,10 +12,15 @@ public class PracticeMain {
         // Create a List of Strings
         List<String> listOfString = createListOfString();
 
+        List<Integer> listWithDuplicate = Arrays.asList(1, 2, 3, 4, 5, 5, 6, 6, 7, 8, 9, 9, 10);
+
+
 
         // SteamMethodsStubs.findAvg(integers);
 
-        SteamMethodsStubs.findLongestString(listOfString);
+        //SteamMethodsStubs.findLongestString(listOfString);
+
+        SteamMethodsStubs.removeDuplicates(listWithDuplicate);
 
     }
 

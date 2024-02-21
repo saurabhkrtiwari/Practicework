@@ -17,4 +17,10 @@ public class SteamMethodsStubs {
         assert s != null;
         System.out.println("Longest String "+s + " for length "+s.length());
     }
+
+    public static void removeDuplicates(List<Integer> integers) {
+        List<Integer> collect = integers.stream().distinct().toList();
+        System.out.println("Duplicate list is "+ integers);
+        System.out.println("Unique list is "+ collect);
+    }
 }
