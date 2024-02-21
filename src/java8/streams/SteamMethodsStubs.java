@@ -1,5 +1,6 @@
 package java8.streams;
 
+import java.math.BigInteger;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -43,5 +44,10 @@ public class SteamMethodsStubs {
     public static void mergeAndRemoveDuplicate(List<Integer> listWithDuplicate, List<Integer> listFromOneToTen) {
         List<Integer> list = Stream.concat(listWithDuplicate.stream(), listFromOneToTen.stream()).distinct().toList();
         System.out.println("Merged list "+list);
+    }
+
+    public static void productOfNumbers(List<Integer> list) {
+        long reduce = list.stream().mapToLong(value -> value).reduce(1L, (x, y) -> x * y);
+        System.out.println("Product "+reduce);
     }
 }
