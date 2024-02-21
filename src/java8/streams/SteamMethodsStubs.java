@@ -2,6 +2,7 @@ package java8.streams;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class SteamMethodsStubs {
 
@@ -37,5 +38,10 @@ public class SteamMethodsStubs {
     public static void findTheStringsBiggerThanGivenLengthCount(List<String> listOfString, int i) {
         long collect = listOfString.stream().filter(s -> s.length() > 5).count();
         System.out.println("Strings Count "+collect);
+    }
+
+    public static void mergeAndRemoveDuplicate(List<Integer> listWithDuplicate, List<Integer> listFromOneToTen) {
+        List<Integer> list = Stream.concat(listWithDuplicate.stream(), listFromOneToTen.stream()).distinct().toList();
+        System.out.println("Merged list "+list);
     }
 }
