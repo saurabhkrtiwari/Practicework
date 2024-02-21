@@ -12,7 +12,6 @@ public class PracticeMain {
             integers.add(random.nextInt(1000)); // Change 1000 to the desired upper bound
         }
 
-
         SteamMethodsStubs.findAvg(integers);
     }
 }
