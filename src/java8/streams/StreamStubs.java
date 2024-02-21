@@ -1,11 +1,10 @@
 package java8.streams;
 
-import java.math.BigInteger;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class SteamMethodsStubs {
+public class StreamStubs {
 
     public static void findAvg(List<Integer> list) {
         OptionalDouble average = list.stream().mapToInt(value -> value).average();
@@ -49,5 +48,10 @@ public class SteamMethodsStubs {
     public static void productOfNumbers(List<Integer> list) {
         long reduce = list.stream().mapToLong(value -> value).reduce(1L, (x, y) -> x * y);
         System.out.println("Product "+reduce);
+    }
+
+    public static void sortStringByLength(List<String> list) {
+        List<String> collect = list.stream().sorted(String::compareTo).toList();
+        System.out.println("Sorted List "+collect);
     }
 }

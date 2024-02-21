@@ -28,7 +28,9 @@ public class PracticeMain {
        // SteamMethodsStubs.findTheStringsBiggerThanGivenLengthCount(listOfString,5);
         // SteamMethodsStubs.mergeAndRemoveDuplicate(listWithDuplicate,listFromOneToTen);
 
-        SteamMethodsStubs.productOfNumbers(listFromOneToTen);
+       // StreamStubs.productOfNumbers(listFromOneToTen);
+        StreamStubs.sortStringByLength(listOfString);
+
 
 
     }
