@@ -23,4 +23,19 @@ public class SteamMethodsStubs {
         System.out.println("Duplicate list is "+ integers);
         System.out.println("Unique list is "+ collect);
     }
+
+    public static void sumOfSquareOfEvenNumbers(List<Integer> listFromOneToTen) {
+        int sum = listFromOneToTen.stream().filter(integer -> integer % 2 == 0).map(integer -> integer * integer).mapToInt(s -> s).sum();
+        System.out.println("Sum of even numbers "+sum);
+    }
+
+    public static void findTheStringsBiggerThanGivenLength(List<String> listOfString, int i) {
+        List<String> collect = listOfString.stream().filter(s -> s.length() > 5).toList();
+        System.out.println("Strings "+collect);
+    }
+
+    public static void findTheStringsBiggerThanGivenLengthCount(List<String> listOfString, int i) {
+        long collect = listOfString.stream().filter(s -> s.length() > 5).count();
+        System.out.println("Strings Count "+collect);
+    }
 }

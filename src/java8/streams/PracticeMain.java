@@ -13,6 +13,7 @@ public class PracticeMain {
         List<String> listOfString = createListOfString();
 
         List<Integer> listWithDuplicate = Arrays.asList(1, 2, 3, 4, 5, 5, 6, 6, 7, 8, 9, 9, 10);
+        List<Integer> listFromOneToTen = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
 
 
@@ -20,7 +21,11 @@ public class PracticeMain {
 
         //SteamMethodsStubs.findLongestString(listOfString);
 
-        SteamMethodsStubs.removeDuplicates(listWithDuplicate);
+       // SteamMethodsStubs.removeDuplicates(listWithDuplicate);
+
+       // SteamMethodsStubs.sumOfSquareOfEvenNumbers(listFromOneToTen);
+      //  SteamMethodsStubs.findTheStringsBiggerThanGivenLength(listOfString,5);
+        SteamMethodsStubs.findTheStringsBiggerThanGivenLengthCount(listOfString,5);
 
     }
 
