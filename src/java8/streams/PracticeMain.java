@@ -39,7 +39,8 @@ public class PracticeMain {
        stringListWithNull.add(null);
        // StreamStubs.removeNullFromList(stringListWithNull);
 
-        StreamStubs.countOfCharacterInListOfStrings(listOfString,'a');
+        //StreamStubs.countOfCharacterInListOfStrings(listOfString,'a');
+        StreamStubs.smallestNumberByIndex(listFromOneToTen,2);
 
 
     }

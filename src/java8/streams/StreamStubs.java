@@ -79,4 +79,10 @@ public class StreamStubs {
                 );
         System.out.println("Count of character "+ a +" in String wise "+collect);
     }
+
+    public static void smallestNumberByIndex(List<Integer> listFromOneToTen, int i) {
+        Integer number = listFromOneToTen.stream().sorted().skip(1).findFirst().orElse(0);
+        System.out.println("Smallest number at '"+i + "' position "+number);
+
+    }
 }
