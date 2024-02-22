@@ -59,4 +59,12 @@ public class StreamStubs {
         Map<String, Long> collect = listOfString.stream().collect(Collectors.groupingBy(s -> s, Collectors.counting()));
         System.out.println("Word with frequency "+collect);
     }
+
+    public static void differenceInMaxAndMin(List<Integer> integers) {
+        IntSummaryStatistics intSummaryStatistics = integers.stream().mapToInt(value -> value).summaryStatistics();
+        int difference = intSummaryStatistics.getMax() - intSummaryStatistics.getMin();
+        System.out.println("Max "+intSummaryStatistics.getMax()
+                +" and Min "+intSummaryStatistics.getMin()
+                +" difference "+difference);
+    }
 }
