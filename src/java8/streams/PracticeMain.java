@@ -26,10 +26,10 @@ public class PracticeMain {
        // SteamMethodsStubs.sumOfSquareOfEvenNumbers(listFromOneToTen);
       //  SteamMethodsStubs.findTheStringsBiggerThanGivenLength(listOfString,5);
        // SteamMethodsStubs.findTheStringsBiggerThanGivenLengthCount(listOfString,5);
-        // SteamMethodsStubs.mergeAndRemoveDuplicate(listWithDuplicate,listFromOneToTen);
+       // StreamStubs.mergeAndRemoveDuplicate(listWithDuplicate,listFromOneToTen);
 
        // StreamStubs.productOfNumbers(listFromOneToTen);
-        StreamStubs.sortStringByLength(listOfString);
+   //     StreamStubs.sortStringByLength(listOfString);
 
 
 

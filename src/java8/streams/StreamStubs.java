@@ -41,7 +41,7 @@ public class StreamStubs {
     }
 
     public static void mergeAndRemoveDuplicate(List<Integer> listWithDuplicate, List<Integer> listFromOneToTen) {
-        List<Integer> list = Stream.concat(listWithDuplicate.stream(), listFromOneToTen.stream()).distinct().toList();
+        List<Integer> list = Stream.concat(listWithDuplicate.stream(), listFromOneToTen.stream()).distinct().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
         System.out.println("Merged list "+list);
     }
 
