@@ -67,4 +67,9 @@ public class StreamStubs {
                 +" and Min "+intSummaryStatistics.getMin()
                 +" difference "+difference);
     }
+
+    public static void removeNullFromList(List<String> stringListWithNull) {
+        List<String > collect = stringListWithNull.stream().filter(Objects::nonNull).toList();
+        System.out.println(" List without null "+collect);
+    }
 }

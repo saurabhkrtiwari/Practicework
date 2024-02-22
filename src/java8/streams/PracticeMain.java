@@ -33,7 +33,11 @@ public class PracticeMain {
 
        // StreamStubs.countOfWord(listOfString);
        StreamStubs.differenceInMaxAndMin(integers);
-
+       List<String> stringListWithNull = new ArrayList<>(listOfString);
+       stringListWithNull.add(null);
+       stringListWithNull.add(null);
+       stringListWithNull.add(null);
+        StreamStubs.removeNullFromList(stringListWithNull);
 
 
     }
