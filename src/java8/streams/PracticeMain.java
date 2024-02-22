@@ -31,6 +31,8 @@ public class PracticeMain {
        // StreamStubs.productOfNumbers(listFromOneToTen);
    //     StreamStubs.sortStringByLength(listOfString);
 
+        StreamStubs.countOfWord(listOfString);
+
 
 
     }

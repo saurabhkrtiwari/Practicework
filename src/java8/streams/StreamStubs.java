@@ -54,4 +54,9 @@ public class StreamStubs {
         List<String> collect = list.stream().sorted(String::compareTo).toList();
         System.out.println("Sorted List "+collect);
     }
+
+    public static void countOfWord(List<String> listOfString) {
+        Map<String, Long> collect = listOfString.stream().collect(Collectors.groupingBy(s -> s, Collectors.counting()));
+        System.out.println("Word with frequency "+collect);
+    }
 }
