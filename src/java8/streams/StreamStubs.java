@@ -72,4 +72,11 @@ public class StreamStubs {
         List<String > collect = stringListWithNull.stream().filter(Objects::nonNull).toList();
         System.out.println(" List without null "+collect);
     }
+
+    public static void countOfCharacterInListOfStrings(List<String> listOfString, char a) {
+        Map<String, Long> collect = listOfString.stream()
+                .collect(Collectors.toMap(s -> s, s -> s.chars().filter(c -> c == a).count())
+                );
+        System.out.println("Count of character "+ a +" in String wise "+collect);
+    }
 }

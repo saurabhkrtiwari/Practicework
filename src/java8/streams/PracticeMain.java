@@ -32,12 +32,14 @@ public class PracticeMain {
    //     StreamStubs.sortStringByLength(listOfString);
 
        // StreamStubs.countOfWord(listOfString);
-       StreamStubs.differenceInMaxAndMin(integers);
+     //  StreamStubs.differenceInMaxAndMin(integers);
        List<String> stringListWithNull = new ArrayList<>(listOfString);
        stringListWithNull.add(null);
        stringListWithNull.add(null);
        stringListWithNull.add(null);
-        StreamStubs.removeNullFromList(stringListWithNull);
+       // StreamStubs.removeNullFromList(stringListWithNull);
+
+        StreamStubs.countOfCharacterInListOfStrings(listOfString,'a');
 
 
     }
