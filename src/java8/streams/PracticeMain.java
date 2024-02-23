@@ -49,6 +49,7 @@ public class PracticeMain {
        // StreamStubs.nthFibonacci(5);
         // StreamStubs.concatAllList(listOfString);
         StreamStubs.findMaxAndMinList(listOfString);
+        StreamStubs.findAllPrimes(integers);
 
 
     }

@@ -122,4 +122,8 @@ public class StreamStubs {
         IntSummaryStatistics intSummaryStatistics = listOfString.stream().mapToInt(String::length).summaryStatistics();
         System.out.println("Max Length "+intSummaryStatistics.getMax()+" Min Length "+intSummaryStatistics.getMin());
     }
+
+    public static void findAllPrimes(List<Integer> integers) {
+
+    }
 }
