@@ -15,6 +15,9 @@ public class PracticeMain {
         List<Integer> listWithDuplicate = Arrays.asList(1, 2, 3, 4, 5, 5, 6, 6, 7, 8, 9, 9, 10);
         List<Integer> listFromOneToTen = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
+        List<String> testPalindrome = Arrays.asList("abc", "abba", "racecar", "hello", "world", "deified", "noon", "level", "radar", "civic");
+
+
 
 
         // SteamMethodsStubs.findAvg(integers);
@@ -40,7 +43,11 @@ public class PracticeMain {
        // StreamStubs.removeNullFromList(stringListWithNull);
 
         //StreamStubs.countOfCharacterInListOfStrings(listOfString,'a');
-        StreamStubs.smallestNumberByIndex(listFromOneToTen,2);
+       // StreamStubs.smallestNumberByIndex(listFromOneToTen,2);
+
+        //StreamStubs.longestPalindrome(testPalindrome);
+       // StreamStubs.nthFibonacci(5);
+        StreamStubs.concatAllList(listOfString);
 
 
     }

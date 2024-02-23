@@ -85,4 +85,36 @@ public class StreamStubs {
         System.out.println("Smallest number at '"+i + "' position "+number);
 
     }
+
+    public static boolean isPalindrome(String str) {
+        int left = 0;
+        int right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+    public static void longestPalindrome(List<String> list) {
+        String s = list.stream().filter(StreamStubs::isPalindrome).max(Comparator.comparingInt(String::length)).orElse(null);
+        System.out.println("longest "+s);
+    }
+
+    public static void nthFibonacci(int i) {
+        int i1 = Stream.iterate(new int[]{0, 1}, fib -> new int[]{fib[1], fib[0] + fib[1]})
+                .limit(i)
+                .mapToInt(fib -> fib[0])
+                .reduce((first, second) -> second)
+                .orElse(0);
+        System.out.println("nth bubonic number "+i1);
+    }
+
+    public static void concatAllList(List<String> listOfString) {
+        String concatString = String.join("", listOfString);
+        System.out.println("concatenated String "+concatString);
+    }
 }
