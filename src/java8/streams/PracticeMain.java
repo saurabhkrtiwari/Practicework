@@ -47,7 +47,8 @@ public class PracticeMain {
 
         //StreamStubs.longestPalindrome(testPalindrome);
        // StreamStubs.nthFibonacci(5);
-        StreamStubs.concatAllList(listOfString);
+        // StreamStubs.concatAllList(listOfString);
+        StreamStubs.findMaxAndMinList(listOfString);
 
 
     }

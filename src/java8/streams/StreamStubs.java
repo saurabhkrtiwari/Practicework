@@ -117,4 +117,9 @@ public class StreamStubs {
         String concatString = String.join("", listOfString);
         System.out.println("concatenated String "+concatString);
     }
+
+    public static void findMaxAndMinList(List<String> listOfString) {
+        IntSummaryStatistics intSummaryStatistics = listOfString.stream().mapToInt(String::length).summaryStatistics();
+        System.out.println("Max Length "+intSummaryStatistics.getMax()+" Min Length "+intSummaryStatistics.getMin());
+    }
 }
