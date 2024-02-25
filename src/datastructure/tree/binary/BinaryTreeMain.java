@@ -120,6 +120,34 @@ class BinaryTreeLinkedList{
         }
         System.out.println("Value not found");
     }
+
+    public void insertNode(String string) {
+        BinaryTreeNode treeNode = new BinaryTreeNode();
+        treeNode.setValue(string);
+        if(null==root){
+            this.root=treeNode;
+            System.out.println("new node added at root");
+            return;
+        }
+        Queue<BinaryTreeNode> binaryTreeNodes = new LinkedList<>();
+
+        binaryTreeNodes.add(root);
+        while (!binaryTreeNodes.isEmpty()){
+            BinaryTreeNode node = binaryTreeNodes.remove();
+            if(node.getLeft()==null){
+                node.setLeft(treeNode);
+                System.out.println("Node added at left of node"+node.getValue());
+                break;
+            }else if(node.getRight()==null){
+                node.setRight(treeNode);
+                System.out.println("Node added at Right of node"+node.getValue());
+                break;
+            }else {
+                binaryTreeNodes.add(node.getLeft());
+                binaryTreeNodes.add(node.getRight());
+            }
+        }
+    }
 }
 
 public class BinaryTreeMain{
@@ -175,7 +203,16 @@ public class BinaryTreeMain{
         Scanner  scanner = new Scanner(System.in);
         String searchKey = scanner.next();
 
-        binaryTree.search(searchKey);
+       // binaryTree.search(searchKey);
+
+        binaryTree.insertNode(searchKey);
+        binaryTree.insertNode("n11");
+        binaryTree.insertNode("n11");
+        binaryTree.insertNode("n11");
+        binaryTree.insertNode("n11");
+        binaryTree.insertNode("n11");
+        binaryTree.insertNode("n11");
+        binaryTree.insertNode("n11");
 
     }
 
