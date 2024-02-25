@@ -53,7 +53,7 @@ class BinaryTreeLinkedList{
     public BinaryTreeLinkedList() {
         this.root = null;
     }
-
+//DFS
     void preOrder(BinaryTreeNode binaryTreeNode){
         if(binaryTreeNode==null){
             return;
@@ -85,6 +85,7 @@ class BinaryTreeLinkedList{
 
     }
 
+    //BFS
     public void levelOrderTraversal() {
         Queue<BinaryTreeNode> levelOrderQueue = new LinkedList<>();
         levelOrderQueue.add(root);
