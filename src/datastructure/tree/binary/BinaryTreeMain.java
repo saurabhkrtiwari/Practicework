@@ -2,6 +2,7 @@ package datastructure.tree.binary;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
 class BinaryTreeNode {
 
@@ -98,6 +99,26 @@ class BinaryTreeLinkedList{
             }
         }
     }
+
+    public void search(String searchKey){
+        Queue<BinaryTreeNode> levelOrderQueue = new LinkedList<>();
+        levelOrderQueue.add(root);
+        while (!levelOrderQueue.isEmpty()){
+            BinaryTreeNode node = levelOrderQueue.remove();
+            if(searchKey.equals(node.getValue())){
+                System.out.println("Value fount "+searchKey);
+                return;
+            }else{
+                if(node.getLeft()!=null){
+                    levelOrderQueue.add(node.getLeft());
+                }
+                if (node.getRight()!=null){
+                    levelOrderQueue.add(node.getRight());
+                }
+            }
+        }
+        System.out.println("Value not found");
+    }
 }
 
 public class BinaryTreeMain{
@@ -148,6 +169,12 @@ public class BinaryTreeMain{
 
         System.out.println("level order traversal ");
         binaryTree.levelOrderTraversal();
+        System.out.println();
+
+        Scanner  scanner = new Scanner(System.in);
+        String searchKey = scanner.next();
+
+        binaryTree.search(searchKey);
 
     }
 
