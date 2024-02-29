@@ -8,7 +8,7 @@ public class TestStream {
 
 
     public static Map<String, Long> getMapWithCount(List<String> list){
-        return list.stream().filter(s->Collections.frequency(list,s)>1). collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+        return list.stream().filter(s->Collections.frequency(list,s)>1). collect(Collectors.groupingBy(s->s,Collectors.counting()));
     }
 
     public static void main(String[] args) {
